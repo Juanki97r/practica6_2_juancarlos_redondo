@@ -38,5 +38,44 @@ public abstract class Persona {
     this.nif = nif;
    }
 
+   @Override
+   public int hashCode() {
+      final int prime = 31;
+      int result = 1;
+      result = prime * result + ((nombre == null) ? 0 : nombre.hashCode());
+      result = prime * result + ((apellido == null) ? 0 : apellido.hashCode());
+      result = prime * result + ((nif == null) ? 0 : nif.hashCode());
+      return result;
+   }
+
+   @Override
+   public boolean equals(Object obj) {
+      if (this == obj)
+         return true;
+      if (obj == null)
+         return false;
+      if (getClass() != obj.getClass())
+         return false;
+      Persona other = (Persona) obj;
+      if (nombre == null) {
+         if (other.nombre != null)
+            return false;
+      } else if (!nombre.equals(other.nombre))
+         return false;
+      if (apellido == null) {
+         if (other.apellido != null)
+            return false;
+      } else if (!apellido.equals(other.apellido))
+         return false;
+      if (nif == null) {
+         if (other.nif != null)
+            return false;
+      } else if (!nif.equals(other.nif))
+         return false;
+      return true;
+   }
+
+   
+   
 
 }

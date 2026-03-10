@@ -7,8 +7,13 @@ public class Direccion {
     
     public Direccion(String calleNumero, String codPostal, String poblacion) {
         this.calleNumero = calleNumero;
-        this.codPostal = codPostal;
+        
+        
         this.poblacion = poblacion;
+        if((codPostal.length()>0) & codPostal.length()<=5){
+        this.codPostal = codPostal;
+        }
+        else{ this.codPostal = "OOOOO";}
     }
 
     public Direccion() {
