@@ -18,7 +18,15 @@ public final class Titular extends Profesor {
     
 
     public boolean pedirProrroga( int meses){
+       
+        if(!(fechaJubilacion.plusMonths(meses).isAfter(LocalDate.of(2030, 1, 1)))){
+            setFechaJubilacion(fechaJubilacion.plusMonths(meses));
+            return true;
+        }
+        
+        return false;
 
+        
     }
 
      

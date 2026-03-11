@@ -1,6 +1,7 @@
 package daw;
 
 import java.time.LocalDate;
+import java.time.temporal.ChronoUnit;
 
 public final class Interino extends Profesor {
    
@@ -30,7 +31,9 @@ public final class Interino extends Profesor {
     }
 
     public int calcularDiasTrabajados(){
-
+        long diasLong = ChronoUnit.DAYS.between(fechaCese,fechaInicio)+1;
+        int diasInt = (int) diasLong;
+        return diasInt;
     }
      @Override
    
