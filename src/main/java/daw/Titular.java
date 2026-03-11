@@ -12,8 +12,8 @@ public final class Titular extends Profesor {
         this.fechaJubilacion = fechaJubilacion;
     }
 
-    public Titular(LocalDate fechaJubilacion) {
-        this.fechaJubilacion = fechaJubilacion;
+    public Titular() {
+        
     }
     
 
