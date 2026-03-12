@@ -43,9 +43,9 @@ public final class Titular extends Profesor {
        double irpf=0;
 
        if(this.getEspecialidad() == Especialidad.SECUNDARIA){
-        irpf = (this.getSalarioBase()+this.getComplementoSalarial())*Especialidad.SECUNDARIA.getIrpf();
+        irpf = (getSalarioBase()+getComplementoSalarial())*Especialidad.SECUNDARIA.getIrpf();
        }
-       else{ irpf = (this.getSalarioBase()+this.getComplementoSalarial())*Especialidad.PROFESOR_TECNICO.getIrpf();}
+       else{ irpf = (getSalarioBase()+getComplementoSalarial())*Especialidad.PROFESOR_TECNICO.getIrpf();}
 
 
        return irpf;

@@ -3,7 +3,7 @@ package daw;
 import java.time.LocalDate;
 import java.util.Objects;
 
-public class Alumno extends Persona {
+public class Alumno extends Persona implements SoliciarBaja{
     
     private String numExpd;
     private LocalDate fechaBaja;
@@ -71,6 +71,11 @@ public class Alumno extends Persona {
         } else if (!fechaBaja.equals(other.fechaBaja))
             return false;
         return true;
+    }
+
+    @Override
+    public void solicitarBaja(LocalDate fecha) {
+        this.setFechaBaja(fecha);
     }
 
    

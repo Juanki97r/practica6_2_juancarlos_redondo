@@ -17,17 +17,13 @@ public enum Especialidad {
     return nombre;
 }
 
-   public void setNombre(String nombre) {
-    this.nombre = nombre;
-}
+   
 
    public double getIrpf() {
     return irpf;
 }
 
-   public void setIrpf(double irpf) {
-    this.irpf = irpf;
-}
+  
 
 
    

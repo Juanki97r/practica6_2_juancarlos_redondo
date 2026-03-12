@@ -3,7 +3,7 @@ package daw;
 import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
 
-public final class Interino extends Profesor {
+public final class Interino extends Profesor implements SoliciarBaja {
    
     private LocalDate fechaInicio;
     private LocalDate fechaCese;
@@ -54,6 +54,10 @@ public final class Interino extends Profesor {
     public String toString() {
         return "Interino [nombre=" + nombre + ", apellido=" + apellido + ", fechaInicio=" + fechaInicio + ", nif=" + nif
                 + ", fechaCese=" + fechaCese + "]";
+    }
+    @Override
+    public void solicitarBaja(LocalDate fecha) {
+       this.setFechaCese(fecha);
     }
    
     

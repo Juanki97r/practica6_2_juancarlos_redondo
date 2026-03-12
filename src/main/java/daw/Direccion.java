@@ -32,6 +32,10 @@ public class Direccion {
     }
 
     public void setCodPostal(String codPostal) {
+        if(codPostal.length() != 5){
+            this.codPostal="OOOOO";
+        }
+        
         this.codPostal = codPostal;
     }
 

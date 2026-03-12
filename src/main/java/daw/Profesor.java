@@ -45,10 +45,6 @@ public abstract class Profesor extends Empleado {
 
 
 
-    @Override
-    public double calcularIrpf() {
-        
-        return 0;
-    }
+    
     
 }
